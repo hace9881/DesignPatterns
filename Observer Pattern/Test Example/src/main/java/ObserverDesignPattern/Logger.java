@@ -1,6 +1,6 @@
 package ObserverDesignPattern;
 
-public class Logger implements Observer {
+public class Logger implements Observer,NewsObserver {
     private  Subject subject;
     private double temperature;
     private double windSpeed;
@@ -18,6 +18,11 @@ public class Logger implements Observer {
         this.windSpeed = windSpeed;
         this.pressure = pressure;
         log();
+    }
+
+    @Override
+    public void updateNews(String news, String breakingNews) {
+
     }
 
     public void log()

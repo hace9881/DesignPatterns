@@ -1,6 +1,6 @@
 package ObserverDesignPattern;
 
-public class Alert implements Observer {
+public class Alert implements Observer,NewsObserver {
     private Subject subject;
     private double temperature;
     private double windSpeed;
@@ -17,6 +17,11 @@ public class Alert implements Observer {
         this.windSpeed = windSpeed;
         this.pressure = pressure;
         alert();
+    }
+
+    @Override
+    public void updateNews(String news, String breakingNews) {
+
     }
 
     public void alert()
